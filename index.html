@@ -1,0 +1,3144 @@
+<html xmlns:rem="http://rem.lsi.us.es">
+
+<head>
+
+<title>Proyecto Biblioteca</title>
+
+<style type="text/css">
+
+<!--
+
+            body {
+
+                font-family: arial,verdana;
+
+                font-size: 10pt;
+
+                text-align: justify
+
+            }
+
+
+
+            h1 { font-size: 14pt }
+
+            h2 { font-size: 13pt }
+
+            h3 { font-size: 12pt }
+
+            h4 { font-size: 11pt }
+
+            h5 { font-size: 10pt }
+
+            h6 { font-size: 10pt }
+
+
+
+            h1.cover { font-size: 20pt }
+
+
+
+            tr { font-size: 10pt }
+
+
+
+            table { border: black solid; }
+
+            table.TOC { border: none; }
+
+            ul {
+
+                margin-top:    0pt;
+
+                margin-bottom: 0pt;
+
+                margin-left:   12pt
+
+            }
+
+        -->
+
+</style>
+
+</head>
+
+<body>
+
+<center>
+
+<h3>Proyecto Biblioteca</h3>
+
+<p />
+
+<h1 class="cover">Documento de Requisitos del Sistema de Gestión de Préstamos en una Biblioteca</h1>
+
+<p />
+
+<h3>Versión 1.0</h3>
+
+<h3>Fecha 11/07/2025</h3>
+
+<p />
+
+<h3>Preparado para:</h3>
+
+<a href="#ORG-0001" title="Biblioteca">
+
+<p>
+
+Biblioteca</p>
+
+</a>
+
+<p />
+
+<h3>Preparado por:</h3>
+
+<a href="#ORG-0002" title="Equipo de desarrollo">
+
+<p>
+
+Equipo de desarrollo</p>
+
+</a>
+
+<p />
+
+</center>
+
+<hr size="4" />
+
+<p />
+
+<h1 align="left">Índice</h1>
+
+<p />
+
+<table border="0" width="100%" class="TOC">
+
+<tr>
+
+<th align="left" valign="top">1 </th>
+
+<th align="left" valign="top" width="100%" colspan="3">
+
+<a href="#SEC-0001">
+
+Introducción</a>
+
+</th>
+
+</tr>
+
+<tr><td />
+
+<td align="left" valign="top">1.1 </td>
+
+<td align="left" valign="top" width="100%" colspan="2">
+
+<a href="#SEC-0002">
+
+Propósito</a>
+
+</td>
+
+</tr>
+
+<tr><td />
+
+<td align="left" valign="top">1.2 </td>
+
+<td align="left" valign="top" width="100%" colspan="2">
+
+<a href="#SEC-0003">
+
+Alcance</a>
+
+</td>
+
+</tr>
+
+<tr><td />
+
+<td align="left" valign="top">1.3 </td>
+
+<td align="left" valign="top" width="100%" colspan="2">
+
+<a href="#SEC-0004">
+
+Definiciones, acrónimos y abreviaturas</a>
+
+</td>
+
+</tr>
+
+<tr><td />
+
+<td align="left" valign="top">1.4 </td>
+
+<td align="left" valign="top" width="100%" colspan="2">
+
+<a href="#SEC-0005">
+
+Referencias</a>
+
+</td>
+
+</tr>
+
+<tr><td />
+
+<td align="left" valign="top">1.5 </td>
+
+<td align="left" valign="top" width="100%" colspan="2">
+
+<a href="#SEC-0006">
+
+Visión general del documento</a>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">2 </th>
+
+<th align="left" valign="top" width="100%" colspan="3">
+
+<a href="#SEC-0007">
+
+Descripción general</a>
+
+</th>
+
+</tr>
+
+<tr><td />
+
+<td align="left" valign="top">2.1 </td>
+
+<td align="left" valign="top" width="100%" colspan="2">
+
+<a href="#SEC-0008">
+
+Perspectiva del producto</a>
+
+</td>
+
+</tr>
+
+<tr><td />
+
+<td align="left" valign="top">2.2 </td>
+
+<td align="left" valign="top" width="100%" colspan="2">
+
+<a href="#SEC-0009">
+
+Funciones del sistema</a>
+
+</td>
+
+</tr>
+
+<tr><td />
+
+<td align="left" valign="top">2.3 </td>
+
+<td align="left" valign="top" width="100%" colspan="2">
+
+<a href="#SEC-0010">
+
+Actores</a>
+
+</td>
+
+</tr>
+
+<tr><td />
+
+<td align="left" valign="top">2.4 </td>
+
+<td align="left" valign="top" width="100%" colspan="2">
+
+<a href="#SEC-0011">
+
+Restricciones</a>
+
+</td>
+
+</tr>
+
+<tr><td />
+
+<td align="left" valign="top">2.5 </td>
+
+<td align="left" valign="top" width="100%" colspan="2">
+
+<a href="#SEC-0012">
+
+Suposiciones y dependencias</a>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">3 </th>
+
+<th align="left" valign="top" width="100%" colspan="3">
+
+<a href="#SEC-0013">
+
+Requisitos</a>
+
+</th>
+
+</tr>
+
+<tr><td />
+
+<td align="left" valign="top">3.1 </td>
+
+<td align="left" valign="top" width="100%" colspan="2">
+
+<a href="#SEC-0014">
+
+Requisitos funcionales</a>
+
+</td>
+
+</tr>
+
+<tr><td />
+
+<td align="left" valign="top">3.2 </td>
+
+<td align="left" valign="top" width="100%" colspan="2">
+
+<a href="#SEC-0015">
+
+Requisitos no funcionales</a>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">A </th>
+
+<th align="left" valign="top" width="100%" colspan="3">
+
+<a href="#SEC-0016">
+
+Fuentes del requerimiento</a>
+
+</th>
+
+</tr>
+
+</table>
+
+<p />
+
+<hr size="4" />
+
+<p />
+
+<a name="SEC-0001" />
+
+<h1 align="left">1 
+
+Introducción</h1><a name="PRG-0001" />
+
+<p>Este software de gestión digital de préstamos de libros es un sistema desarrollado para facilitar el proceso de préstamo y seguimiento de libros de la biblioteca pública departamental. El sistema permitirá a los usuarios registrarse, iniciar sesión, buscar libros por título o autor, solicitar préstamos de libros disponibles, renovar préstamos activos y recibir recordatorios sobre los vencimientos. También podrán consultar su historial de préstamos y visualizar bloqueos en caso de deudas o retrasos. Por otra parte, el administrador tendrá acceso a reportes de uso para una mejor toma de decisiones. Todo esto con el fin de lograr la satisfacción del cliente a través de un programa que agiliza los distintos procesos.</p>
+
+<a name="SEC-0002" />
+
+<h2 align="left">1.1 
+
+Propósito</h2><a name="PRG-0002" />
+
+<p>Su propósito es definir los requisitos funcionales y no funcionales del sistema, para mostrar de manera detallada a los clientes, el equipo de desarrollo y administradores del sistema su alineación con las funcionalidades y las limitaciones del proyecto, así como todo el proceso de diseño, desarrollo, pruebas y validación, con el fin de que todos estén bien comunicados sobre lo que el sistema debe poder hacer.</p>
+
+<a name="ORG-0001" />
+
+<table border="1" width="100%">
+
+<tr bgcolor="#c8e0e0">
+
+<th align="left" valign="top">Organización</th>
+
+<th align="left" valign="top" width="100%">
+
+Biblioteca</th>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Dirección</th>
+
+<td align="left" valign="top" colspan="1">
+
+<font color="red"><b>PD</b></font>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Teléfono</th>
+
+<td align="left" valign="top" colspan="1">
+
+<font color="red"><b>PD</b></font>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Fax</th>
+
+<td align="left" valign="top" colspan="1">
+
+<font color="red"><b>PD</b></font>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Comentarios</th>
+
+<td align="left" valign="top" colspan="1">
+
+Ninguno</td>
+
+</tr>
+
+</table>
+
+<p />
+
+<a name="ORG-0002" />
+
+<table border="1" width="100%">
+
+<tr bgcolor="#c8e0e0">
+
+<th align="left" valign="top">Organización</th>
+
+<th align="left" valign="top" width="100%">
+
+Equipo de desarrollo</th>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Dirección</th>
+
+<td align="left" valign="top" colspan="1">
+
+<font color="red"><b>PD</b></font>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Teléfono</th>
+
+<td align="left" valign="top" colspan="1">
+
+<font color="red"><b>PD</b></font>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Fax</th>
+
+<td align="left" valign="top" colspan="1">
+
+<font color="red"><b>PD</b></font>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Comentarios</th>
+
+<td align="left" valign="top" colspan="1">
+
+Ninguno</td>
+
+</tr>
+
+</table>
+
+<p />
+
+<a name="SEC-0003" />
+
+<h2 align="left">1.2 
+
+Alcance</h2><a name="PRG-0003" />
+
+<p>El software permitirá la gestión digital del préstamo de libros dentro de la biblioteca. Donde, el sistema estará disponible para usuarios registrados, quienes podrán buscar libros por título o autor, solicitar préstamos, renovar libros, consultar su historial y recibir notificaciones de vencimiento. Además, mostrará bloqueos en caso de retrasos o deudas pendientes. Para el administrador, el sistema ofrecerá herramientas para consultar reportes de uso y supervisar la actividad de los usuarios.</p>
+
+<a name="OBJ-0001" />
+
+<table border="1" width="100%">
+
+<tr bgcolor="#c8e0e0">
+
+<th align="left" valign="top">OBJ-0001</th>
+
+<th align="left" valign="top" width="100%">
+
+Libreria virtual</th>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Versión</th>
+
+<td align="left" valign="top">1.0 
+
+			( 10/07/2025 )
+
+        </td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Autores</th>
+
+<td align="left" valign="top" colspan="1">
+
+<font color="red"><b>?</b></font>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Fuentes</th>
+
+<td align="left" valign="top" colspan="1">
+
+<font color="red"><b>?</b></font>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Descripción</th>
+
+<td align="left" valign="top">
+
+    El sistema deberá 
+
+<em>
+
+permitir al usuario buscar libros por título o autor, solicitar préstamo de libros disponibles, renovar un préstamo activo, recibir recordatorios de vencimiento, consultar historial de préstamos, ver bloqueos si tiene deudas o retrasos y al administrador le permite consultar reportes de uso de la página web.</em>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Subobjetivos</th>
+
+<td align="left" valign="top">Ninguno</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Importancia</th>
+
+<td align="left" valign="top" colspan="1">
+
+<font color="red"><b>PD</b></font>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Urgencia</th>
+
+<td align="left" valign="top" colspan="1">
+
+<font color="red"><b>PD</b></font>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Estado</th>
+
+<td align="left" valign="top" colspan="1">
+
+<font color="red"><b>PD</b></font>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Estabilidad</th>
+
+<td align="left" valign="top" colspan="1">
+
+<font color="red"><b>PD</b></font>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Comentarios</th>
+
+<td align="left" valign="top" colspan="1">
+
+Ninguno</td>
+
+</tr>
+
+</table>
+
+<p />
+
+<a name="SEC-0004" />
+
+<h2 align="left">1.3 
+
+Definiciones, acrónimos y abreviaturas</h2><a name="PRG-0004" />
+
+<p>1. Usuario: Persona que utiliza el sistema (empleado, lector o administrador) 
+
+<br />2. Administrador: Usuario con privilegios para consultar estadísticas y gestionar el sistema. 
+
+<br />3. ID: Identificador. Código único que permite distinguir de manera individual a cada elemento del sistema (usuarios, citas, médicos, etc.).
+
+<br />4. RF: Requisito funcional
+
+<br />5. RNF: Requisito no funcional</p>
+
+<a name="SEC-0005" />
+
+<h2 align="left">1.4 
+
+Referencias</h2><a name="PRG-0005" />
+
+<p>- Documentación del cliente sobre necesidades funcionales y técnicas del sistema </p>
+
+<a name="SEC-0006" />
+
+<h2 align="left">1.5 
+
+Visión general del documento</h2><a name="PRG-0006" />
+
+<p>El documento está organizado en varias secciones que explican de  los aspectos más importantes del sistema. Comienza con una introducción donde se describe el objetivo del software para gestionar la préstamos de libros en la biblioteca pública departamental. Luego, viene el propósito del documento, que es definir claramente qué debe hacer el sistema y cuáles son sus características principales. También se explica el alcance, definiendo las funciones principales que podrán usar tanto los usuarios registrados como los administradores. Después, se presenta una descripción general del sistema, incluyendo cómo interactúan los usuarios con la plataforma y cuáles son los requisitos específicos que debe cumplir el software para funcionar bien.
+
+<br />
+
+<br />Y por último estos requisitos estarán documentados siguiendo un procedimiento que especifica: un código identificador (por ejemplo, RF-001 o RNF-001), una descripción clara y específica, el tipo de requisito (funcional o no funcional), su prioridad de importancia (alta, media o baja), prioridad de urgencia (alta, media o baja), el estado del desarrollo (en construcción, pendiente de verificación, pendiente de validación o validado) y la fuente del requerimiento (usuario, administrador o sistema). Cada sección tiene como finalidad garantizar una comprensión completa del funcionamiento, diseño, desarrollo, pruebas y validación del sistema, asegurando así que todos los involucrados tengan una visión clara y compartida de lo que se debe implementar.</p>
+
+<a name="SEC-0007" />
+
+<h1 align="left">2 
+
+Descripción general</h1><a name="PRG-0007" />
+
+<p>Book central es un software que sirve para que los usuarios de la biblioteca pública departamental puedan registrarse, iniciar sesión. Al ingresar a la página web los usuarios pueden buscar libros que están en la biblioteca viendo su resumen, autor y editorial para saber de qué trata cada uno. También pueden solicitar el préstamo de los libros que quieran usando datos como título, autor, estante, contacto y documento de identidad, y aparte hay una parte donde se puede renovar el préstamo que ya tienen.<br />
+
+<br />Luego, el sistema muestra un historial con las fechas de préstamo, devolución y el estado en que está cada libro, y también deja ver si el usuario tiene alguna deuda o restricción activa. En ese mismo lugar el usuario puede ver los pagos pendientes y saber hasta cuándo tiene el veto. Por último, este también permite el acceso a reportes y supervisión de actividades hecho para los administradores.</p>
+
+<a name="SEC-0008" />
+
+<h2 align="left">2.1 
+
+Perspectiva del producto</h2><a name="PRG-0008" />
+
+<p>La página web de Book central es un producto que funciona de manera independiente porque solo se encarga de gestionar los préstamos de libros en la biblioteca pública departamental y no depende de otro sistema más grande para poder trabajar. Sirve solo para que los usuarios puedan registrarse, iniciar sesión, buscar los libros, pedirlos prestados y renovar los que ya tienen, además de consultar su historial y ver si tienen bloqueos o deudas. Aunque podría conectarse a otras partes como bases de datos de la biblioteca o sistemas de reportes, pero en sí el software está pensado para que funcione solo como la parte que hace todo el control del préstamo de libros que tiene la biblioteca.
+
+<br />
+
+</p>
+
+<a name="GRF-0001" />
+
+<p align="center">
+
+<img src="..\..\..\Users\usuario\Pictures\Captura5.JPG" title="..\..\..\Users\usuario\Pictures\Captura5.JPG" />
+
+</p>
+
+<p align="center">
+
+<b>Figura 1</b>:
+
+                
+
+Diagrama de clase</p>
+
+<a name="SEC-0009" />
+
+<h2 align="left">2.2 
+
+Funciones del sistema</h2><a name="PRG-0009" />
+
+<p>- Registro e inicio
+
+<br />- Buscar libros por título o autor
+
+<br />- Solicitar préstamo de libros disponibles
+
+<br />- Renovar un préstamo activo
+
+<br />- Recibir recordatorios de vencimiento
+
+<br />- Consultar historial de préstamos
+
+<br />- Ver bloqueos si tiene deudas o retrasos
+
+<br />- El administrador puede consultar reportes de uso
+
+<br />
+
+</p>
+
+<a name="SEC-0010" />
+
+<h2 align="left">2.3 
+
+Actores</h2><a name="ACT-0001" />
+
+<table border="1" width="100%">
+
+<tr bgcolor="#c8e0e0">
+
+<th align="left" valign="top">ACT-0001</th>
+
+<th align="left" valign="top" width="100%">
+
+Usuario</th>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Versión</th>
+
+<td align="left" valign="top">1.0 
+
+			( 11/07/2025 )
+
+        </td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Autores</th>
+
+<td align="left" valign="top" colspan="1">
+
+<font color="red"><b>?</b></font>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Fuentes</th>
+
+<td align="left" valign="top" colspan="1">
+
+<font color="red"><b>?</b></font>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Descripción</th>
+
+<td align="left" valign="top">
+
+    Este actor representa
+
+<em>al lector de la Biblioteca pública departamental capaz de realizar préstamos, devoluciones, ver su historial y revisar sus deudas</em>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Comentarios</th>
+
+<td align="left" valign="top" colspan="1">
+
+Ninguno</td>
+
+</tr>
+
+</table>
+
+<p />
+
+<a name="ACT-0002" />
+
+<table border="1" width="100%">
+
+<tr bgcolor="#c8e0e0">
+
+<th align="left" valign="top">ACT-0002</th>
+
+<th align="left" valign="top" width="100%">
+
+Bibliotecario</th>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Versión</th>
+
+<td align="left" valign="top">1.0 
+
+			( 11/07/2025 )
+
+        </td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Autores</th>
+
+<td align="left" valign="top" colspan="1">
+
+<font color="red"><b>?</b></font>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Fuentes</th>
+
+<td align="left" valign="top" colspan="1">
+
+<font color="red"><b>?</b></font>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Descripción</th>
+
+<td align="left" valign="top">
+
+    Este actor representa
+
+<em>al Usuario con privilegio de gestionar el cátalogo de los libros y atiende inconvenientes en los préstamos y renovaciones</em>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Comentarios</th>
+
+<td align="left" valign="top" colspan="1">
+
+Ninguno</td>
+
+</tr>
+
+</table>
+
+<p />
+
+<a name="ACT-0003" />
+
+<table border="1" width="100%">
+
+<tr bgcolor="#c8e0e0">
+
+<th align="left" valign="top">ACT-0003</th>
+
+<th align="left" valign="top" width="100%">
+
+Administrador</th>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Versión</th>
+
+<td align="left" valign="top">1.0 
+
+			( 11/07/2025 )
+
+        </td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Autores</th>
+
+<td align="left" valign="top" colspan="1">
+
+<font color="red"><b>?</b></font>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Fuentes</th>
+
+<td align="left" valign="top" colspan="1">
+
+<font color="red"><b>?</b></font>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Descripción</th>
+
+<td align="left" valign="top">
+
+    Este actor representa
+
+<em>Usuario con todos los privilegios del sistema como realizar reportes de uso</em>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Comentarios</th>
+
+<td align="left" valign="top" colspan="1">
+
+Ninguno</td>
+
+</tr>
+
+</table>
+
+<p />
+
+<a name="SEC-0011" />
+
+<h2 align="left">2.4 
+
+Restricciones</h2><a name="PRG-0011" />
+
+<p>El software deberá cumplir con la norma ISO 27001 (Sistema de Gestión de Seguridad de la Información), para la seguridad de la información. Este funcionará en dispositivos con navegadores web y conexión a internet estable. Se necesitará la dirección de correo electrónico para el envío de recordatorios. También el administrador será el único con permisos a datos confidenciales, el sistema un no tiene definido en que entorno se desarrollará.</p>
+
+<a name="CRQ-0001" />
+
+<table border="1" width="100%">
+
+<tr bgcolor="#c8e0e0">
+
+<th align="left" valign="top">CRQ-0001</th>
+
+<th align="left" valign="top" width="100%">
+
+Normas</th>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Versión</th>
+
+<td align="left" valign="top">1.0 
+
+			( 11/07/2025 )
+
+        </td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Autores</th>
+
+<td align="left" valign="top" colspan="1">
+
+<font color="red"><b>?</b></font>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Fuentes</th>
+
+<td align="left" valign="top" colspan="1">
+
+<font color="red"><b>?</b></font>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Dependencias</th>
+
+<td align="left" valign="top" colspan="1">Ninguno</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Descripción</th>
+
+<td align="left" valign="top">
+
+	La información almacenada por el sistema deberá satisfacer la siguiente restricción: 
+
+<em>
+
+El sistema deberá cumplir con la norma ISO 27001, para la seguridad de la información de los usuarios</em>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Importancia</th>
+
+<td align="left" valign="top" colspan="1">
+
+<font color="red"><b>PD</b></font>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Urgencia</th>
+
+<td align="left" valign="top" colspan="1">
+
+<font color="red"><b>PD</b></font>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Estado</th>
+
+<td align="left" valign="top" colspan="1">
+
+<font color="red"><b>PD</b></font>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Estabilidad</th>
+
+<td align="left" valign="top" colspan="1">
+
+<font color="red"><b>PD</b></font>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Comentarios</th>
+
+<td align="left" valign="top" colspan="1">
+
+Ninguno</td>
+
+</tr>
+
+</table>
+
+<p />
+
+<a name="CRQ-0002" />
+
+<table border="1" width="100%">
+
+<tr bgcolor="#c8e0e0">
+
+<th align="left" valign="top">CRQ-0002</th>
+
+<th align="left" valign="top" width="100%">
+
+Confidencialidad</th>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Versión</th>
+
+<td align="left" valign="top">1.0 
+
+			( 11/07/2025 )
+
+        </td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Autores</th>
+
+<td align="left" valign="top" colspan="1">
+
+<font color="red"><b>?</b></font>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Fuentes</th>
+
+<td align="left" valign="top" colspan="1">
+
+<font color="red"><b>?</b></font>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Dependencias</th>
+
+<td align="left" valign="top" colspan="1">Ninguno</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Descripción</th>
+
+<td align="left" valign="top">
+
+	La información almacenada por el sistema deberá satisfacer la siguiente restricción: 
+
+<em>
+
+Los administradores serán los únicos con permisos de datos que sean confidenciales </em>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Importancia</th>
+
+<td align="left" valign="top" colspan="1">
+
+<font color="red"><b>PD</b></font>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Urgencia</th>
+
+<td align="left" valign="top" colspan="1">
+
+<font color="red"><b>PD</b></font>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Estado</th>
+
+<td align="left" valign="top" colspan="1">
+
+<font color="red"><b>PD</b></font>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Estabilidad</th>
+
+<td align="left" valign="top" colspan="1">
+
+<font color="red"><b>PD</b></font>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Comentarios</th>
+
+<td align="left" valign="top" colspan="1">
+
+Ninguno</td>
+
+</tr>
+
+</table>
+
+<p />
+
+<a name="SEC-0012" />
+
+<h2 align="left">2.5 
+
+Suposiciones y dependencias</h2><a name="PRG-0012" />
+
+<p>El sistema dependerá de que el usuario tenga acceso a navegadores web con conexión a internet estable. Por otra parte como suposiciones, el sistema utilizará el correo electronico para el envio de notificaciones y que los actores del sistema no cambiarán a futuro. Si este recibe cambios deberá revisarse para poder ajustar nuevamente los requisitos del software. 
+
+<br />
+
+</p>
+
+<a name="SEC-0013" />
+
+<h1 align="left">3 
+
+Requisitos</h1><a name="SEC-0014" />
+
+<h2 align="left">3.1 
+
+Requisitos funcionales</h2><a name="FRQ-0001" />
+
+<table border="1" width="100%">
+
+<tr bgcolor="#c8e0e0">
+
+<th align="left" valign="top">FRQ-0001</th>
+
+<th align="left" valign="top" width="100%">
+
+Registro e inicio de sesión</th>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Versión</th>
+
+<td align="left" valign="top">1.0 
+
+			( 11/07/2025 )
+
+        </td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Autores</th>
+
+<td align="left" valign="top" colspan="1">
+
+<font color="red"><b>?</b></font>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Fuentes</th>
+
+<td align="left" valign="top" colspan="1">
+
+<ul>
+
+<li>
+
+<a href="#STK-0001">
+
+Usuario</a>
+
+<br />
+
+</li>
+
+</ul>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Dependencias</th>
+
+<td align="left" valign="top" colspan="1">
+
+<li>
+
+<a href="#NFR-0001" title="Seguridad">
+
+                                [NFR-0001] 
+
+Seguridad</a>
+
+</li>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Descripción</th>
+
+<td align="left" valign="top">
+
+    El sistema deberá 
+
+<em>
+
+Permitir a los usuarios ingresar al programa a través de sus datos básicos personales (Nombre, télefono, correo, N° de identificación)</em>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Importancia</th>
+
+<td align="left" valign="top" colspan="1">vital</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Urgencia</th>
+
+<td align="left" valign="top" colspan="1">inmediatamente</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Estado</th>
+
+<td align="left" valign="top" colspan="1">validado</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Estabilidad</th>
+
+<td align="left" valign="top" colspan="1">
+
+<font color="red"><b>PD</b></font>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Comentarios</th>
+
+<td align="left" valign="top" colspan="1">
+
+Ninguno</td>
+
+</tr>
+
+</table>
+
+<p />
+
+<a name="FRQ-0002" />
+
+<table border="1" width="100%">
+
+<tr bgcolor="#c8e0e0">
+
+<th align="left" valign="top">FRQ-0002</th>
+
+<th align="left" valign="top" width="100%">
+
+Buscar libros en un cátalogo</th>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Versión</th>
+
+<td align="left" valign="top">1.0 
+
+			( 11/07/2025 )
+
+        </td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Autores</th>
+
+<td align="left" valign="top" colspan="1">
+
+<font color="red"><b>?</b></font>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Fuentes</th>
+
+<td align="left" valign="top" colspan="1">
+
+<ul>
+
+<li>
+
+<a href="#STK-0001">
+
+Usuario</a>
+
+<br />
+
+</li>
+
+</ul>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Dependencias</th>
+
+<td align="left" valign="top" colspan="1">
+
+<li>
+
+<a href="#NFR-0002" title="Usabilidad">
+
+                                [NFR-0002] 
+
+Usabilidad</a>
+
+</li>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Descripción</th>
+
+<td align="left" valign="top">
+
+    El sistema deberá 
+
+<em>
+
+Permitir a los usuarios buscar un libro según su título o autor</em>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Importancia</th>
+
+<td align="left" valign="top" colspan="1">vital</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Urgencia</th>
+
+<td align="left" valign="top" colspan="1">hay presión</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Estado</th>
+
+<td align="left" valign="top" colspan="1">pendiente de validación</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Estabilidad</th>
+
+<td align="left" valign="top" colspan="1">
+
+<font color="red"><b>PD</b></font>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Comentarios</th>
+
+<td align="left" valign="top" colspan="1">
+
+Ninguno</td>
+
+</tr>
+
+</table>
+
+<p />
+
+<a name="FRQ-0003" />
+
+<table border="1" width="100%">
+
+<tr bgcolor="#c8e0e0">
+
+<th align="left" valign="top">FRQ-0003</th>
+
+<th align="left" valign="top" width="100%">
+
+Solicitar préstamo</th>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Versión</th>
+
+<td align="left" valign="top">1.0 
+
+			( 11/07/2025 )
+
+        </td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Autores</th>
+
+<td align="left" valign="top" colspan="1">
+
+<font color="red"><b>?</b></font>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Fuentes</th>
+
+<td align="left" valign="top" colspan="1">
+
+<ul>
+
+<li>
+
+<a href="#STK-0001">
+
+Usuario</a>
+
+<br />
+
+</li>
+
+</ul>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Dependencias</th>
+
+<td align="left" valign="top" colspan="1">
+
+<li>
+
+<a href="#NFR-0002" title="Usabilidad">
+
+                                [NFR-0002] 
+
+Usabilidad</a>
+
+</li>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Descripción</th>
+
+<td align="left" valign="top">
+
+    El sistema deberá 
+
+<em>
+
+Permitir a los usuarios solicitar préstamos de libros disponibles a partir de los datos necesarios para realizar el proceso</em>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Importancia</th>
+
+<td align="left" valign="top" colspan="1">vital</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Urgencia</th>
+
+<td align="left" valign="top" colspan="1">inmediatamente</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Estado</th>
+
+<td align="left" valign="top" colspan="1">pendiente de verificación</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Estabilidad</th>
+
+<td align="left" valign="top" colspan="1">
+
+<font color="red"><b>PD</b></font>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Comentarios</th>
+
+<td align="left" valign="top" colspan="1">
+
+Ninguno</td>
+
+</tr>
+
+</table>
+
+<p />
+
+<a name="FRQ-0004" />
+
+<table border="1" width="100%">
+
+<tr bgcolor="#c8e0e0">
+
+<th align="left" valign="top">FRQ-0004</th>
+
+<th align="left" valign="top" width="100%">
+
+Renovar préstamo</th>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Versión</th>
+
+<td align="left" valign="top">1.0 
+
+			( 11/07/2025 )
+
+        </td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Autores</th>
+
+<td align="left" valign="top" colspan="1">
+
+<font color="red"><b>?</b></font>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Fuentes</th>
+
+<td align="left" valign="top" colspan="1">
+
+<ul>
+
+<li>
+
+<a href="#STK-0001">
+
+Usuario</a>
+
+<br />
+
+</li>
+
+</ul>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Dependencias</th>
+
+<td align="left" valign="top" colspan="1">
+
+<li>
+
+<a href="#NFR-0002" title="Usabilidad">
+
+                                [NFR-0002] 
+
+Usabilidad</a>
+
+</li>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Descripción</th>
+
+<td align="left" valign="top">
+
+    El sistema deberá 
+
+<em>
+
+Permitir a los usuarios renovar un préstamo activo </em>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Importancia</th>
+
+<td align="left" valign="top" colspan="1">vital</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Urgencia</th>
+
+<td align="left" valign="top" colspan="1">inmediatamente</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Estado</th>
+
+<td align="left" valign="top" colspan="1">pendiente de verificación</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Estabilidad</th>
+
+<td align="left" valign="top" colspan="1">
+
+<font color="red"><b>PD</b></font>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Comentarios</th>
+
+<td align="left" valign="top" colspan="1">
+
+Ninguno</td>
+
+</tr>
+
+</table>
+
+<p />
+
+<a name="FRQ-0005" />
+
+<table border="1" width="100%">
+
+<tr bgcolor="#c8e0e0">
+
+<th align="left" valign="top">FRQ-0005</th>
+
+<th align="left" valign="top" width="100%">
+
+Recordatorio de vencimiento</th>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Versión</th>
+
+<td align="left" valign="top">1.0 
+
+			( 11/07/2025 )
+
+        </td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Autores</th>
+
+<td align="left" valign="top" colspan="1">
+
+<font color="red"><b>?</b></font>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Fuentes</th>
+
+<td align="left" valign="top" colspan="1">
+
+<ul>
+
+<li>
+
+<a href="#STK-0003">
+
+Sistema</a>
+
+<br />
+
+</li>
+
+</ul>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Dependencias</th>
+
+<td align="left" valign="top" colspan="1">Ninguno</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Descripción</th>
+
+<td align="left" valign="top">
+
+    El sistema deberá 
+
+<em>
+
+Recordar a los usuarios a través de correos electrónicos que recibirá para dejar claro la fecha de vencimiento del préstamo al lector </em>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Importancia</th>
+
+<td align="left" valign="top" colspan="1">importante</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Urgencia</th>
+
+<td align="left" valign="top" colspan="1">inmediatamente</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Estado</th>
+
+<td align="left" valign="top" colspan="1">en construcción</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Estabilidad</th>
+
+<td align="left" valign="top" colspan="1">
+
+<font color="red"><b>PD</b></font>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Comentarios</th>
+
+<td align="left" valign="top" colspan="1">
+
+Ninguno</td>
+
+</tr>
+
+</table>
+
+<p />
+
+<a name="FRQ-0006" />
+
+<table border="1" width="100%">
+
+<tr bgcolor="#c8e0e0">
+
+<th align="left" valign="top">FRQ-0006</th>
+
+<th align="left" valign="top" width="100%">
+
+Historial de préstamo</th>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Versión</th>
+
+<td align="left" valign="top">1.0 
+
+			( 11/07/2025 )
+
+        </td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Autores</th>
+
+<td align="left" valign="top" colspan="1">
+
+<font color="red"><b>?</b></font>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Fuentes</th>
+
+<td align="left" valign="top" colspan="1">
+
+<ul>
+
+<li>
+
+<a href="#STK-0001">
+
+Usuario</a>
+
+<br />
+
+</li>
+
+</ul>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Dependencias</th>
+
+<td align="left" valign="top" colspan="1">
+
+<li>
+
+<a href="#NFR-0002" title="Usabilidad">
+
+                                [NFR-0002] 
+
+Usabilidad</a>
+
+</li>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Descripción</th>
+
+<td align="left" valign="top">
+
+    El sistema deberá 
+
+<em>
+
+Permitir al usuario consultar su historial de préstamos realizados a la biblioteca y tener una lista estructurada de aspectos acorde al préstamo como su fecha de incio, devolución y estado</em>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Importancia</th>
+
+<td align="left" valign="top" colspan="1">importante</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Urgencia</th>
+
+<td align="left" valign="top" colspan="1">hay presión</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Estado</th>
+
+<td align="left" valign="top" colspan="1">pendiente de validación</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Estabilidad</th>
+
+<td align="left" valign="top" colspan="1">
+
+<font color="red"><b>PD</b></font>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Comentarios</th>
+
+<td align="left" valign="top" colspan="1">
+
+Ninguno</td>
+
+</tr>
+
+</table>
+
+<p />
+
+<a name="FRQ-0007" />
+
+<table border="1" width="100%">
+
+<tr bgcolor="#c8e0e0">
+
+<th align="left" valign="top">FRQ-0007</th>
+
+<th align="left" valign="top" width="100%">
+
+Bloqueos y deudas</th>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Versión</th>
+
+<td align="left" valign="top">1.0 
+
+			( 11/07/2025 )
+
+        </td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Autores</th>
+
+<td align="left" valign="top" colspan="1">
+
+<font color="red"><b>?</b></font>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Fuentes</th>
+
+<td align="left" valign="top" colspan="1">
+
+<ul>
+
+<li>
+
+<a href="#STK-0001">
+
+Usuario</a>
+
+<br />
+
+</li>
+
+</ul>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Dependencias</th>
+
+<td align="left" valign="top" colspan="1">
+
+<li>
+
+<a href="#NFR-0002" title="Usabilidad">
+
+                                [NFR-0002] 
+
+Usabilidad</a>
+
+</li>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Descripción</th>
+
+<td align="left" valign="top">
+
+    El sistema deberá 
+
+<em>
+
+Mostrar de manera clara y directa los bloqueos y deudas que este presenta hacia la biblioteca como los pagos pendientes y fecha de finalización de bloqueos</em>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Importancia</th>
+
+<td align="left" valign="top" colspan="1">importante</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Urgencia</th>
+
+<td align="left" valign="top" colspan="1">hay presión</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Estado</th>
+
+<td align="left" valign="top" colspan="1">pendiente de verificación</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Estabilidad</th>
+
+<td align="left" valign="top" colspan="1">
+
+<font color="red"><b>PD</b></font>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Comentarios</th>
+
+<td align="left" valign="top" colspan="1">
+
+Ninguno</td>
+
+</tr>
+
+</table>
+
+<p />
+
+<a name="FRQ-0008" />
+
+<table border="1" width="100%">
+
+<tr bgcolor="#c8e0e0">
+
+<th align="left" valign="top">FRQ-0008</th>
+
+<th align="left" valign="top" width="100%">
+
+Reporte de uso</th>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Versión</th>
+
+<td align="left" valign="top">1.0 
+
+			( 11/07/2025 )
+
+        </td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Autores</th>
+
+<td align="left" valign="top" colspan="1">
+
+<font color="red"><b>?</b></font>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Fuentes</th>
+
+<td align="left" valign="top" colspan="1">
+
+<ul>
+
+<li>
+
+<a href="#STK-0002">
+
+Administrador</a>
+
+<br />
+
+</li>
+
+</ul>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Dependencias</th>
+
+<td align="left" valign="top" colspan="1">Ninguno</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Descripción</th>
+
+<td align="left" valign="top">
+
+    El sistema deberá 
+
+<em>
+
+Permitir al administrados consultar reportes de uso de la página web para revisar el funcionamiento de esta como para poder realizar reportes estadísticos de las actividades que realicen los usuarios</em>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Importancia</th>
+
+<td align="left" valign="top" colspan="1">vital</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Urgencia</th>
+
+<td align="left" valign="top" colspan="1">inmediatamente</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Estado</th>
+
+<td align="left" valign="top" colspan="1">en construcción</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Estabilidad</th>
+
+<td align="left" valign="top" colspan="1">
+
+<font color="red"><b>PD</b></font>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Comentarios</th>
+
+<td align="left" valign="top" colspan="1">
+
+Ninguno</td>
+
+</tr>
+
+</table>
+
+<p />
+
+<a name="SEC-0015" />
+
+<h2 align="left">3.2 
+
+Requisitos no funcionales</h2><a name="NFR-0001" />
+
+<table border="1" width="100%">
+
+<tr bgcolor="#c8e0e0">
+
+<th align="left" valign="top">NFR-0001</th>
+
+<th align="left" valign="top" width="100%">
+
+Seguridad</th>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Versión</th>
+
+<td align="left" valign="top">1.0 
+
+			( 11/07/2025 )
+
+        </td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Autores</th>
+
+<td align="left" valign="top" colspan="1">
+
+<font color="red"><b>?</b></font>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Fuentes</th>
+
+<td align="left" valign="top" colspan="1">
+
+<ul>
+
+<li>
+
+<a href="#STK-0003">
+
+Sistema</a>
+
+<br />
+
+</li>
+
+</ul>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Dependencias</th>
+
+<td align="left" valign="top" colspan="1">
+
+<li>
+
+<a href="#FRQ-0001" title="Registro e inicio de sesión">
+
+                                [FRQ-0001] 
+
+Registro e inicio de sesión</a>
+
+</li>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Descripción</th>
+
+<td align="left" valign="top">
+
+    El sistema deberá 
+
+<em>
+
+Realizar cifrado de contraseña, debe seguir los lineamientos de las normas que se aplican y control de ingreso a través de las políticas de privacidad </em>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Importancia</th>
+
+<td align="left" valign="top" colspan="1">vital</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Urgencia</th>
+
+<td align="left" valign="top" colspan="1">inmediatamente</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Estado</th>
+
+<td align="left" valign="top" colspan="1">pendiente de verificación</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Estabilidad</th>
+
+<td align="left" valign="top" colspan="1">
+
+<font color="red"><b>PD</b></font>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Comentarios</th>
+
+<td align="left" valign="top" colspan="1">
+
+Ninguno</td>
+
+</tr>
+
+</table>
+
+<p />
+
+<a name="NFR-0002" />
+
+<table border="1" width="100%">
+
+<tr bgcolor="#c8e0e0">
+
+<th align="left" valign="top">NFR-0002</th>
+
+<th align="left" valign="top" width="100%">
+
+Usabilidad</th>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Versión</th>
+
+<td align="left" valign="top">1.0 
+
+			( 11/07/2025 )
+
+        </td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Autores</th>
+
+<td align="left" valign="top" colspan="1">
+
+<font color="red"><b>?</b></font>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Fuentes</th>
+
+<td align="left" valign="top" colspan="1">
+
+<ul>
+
+<li>
+
+<a href="#STK-0001">
+
+Usuario</a>
+
+<br />
+
+</li>
+
+</ul>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Dependencias</th>
+
+<td align="left" valign="top" colspan="1">
+
+<li>
+
+<a href="#FRQ-0003" title="Solicitar préstamo">
+
+                                [FRQ-0003] 
+
+Solicitar préstamo</a>
+
+</li>
+
+<li>
+
+<a href="#FRQ-0004" title="Renovar préstamo">
+
+                                [FRQ-0004] 
+
+Renovar préstamo</a>
+
+</li>
+
+<li>
+
+<a href="#FRQ-0002" title="Buscar libros en un cátalogo">
+
+                                [FRQ-0002] 
+
+Buscar libros en un cátalogo</a>
+
+</li>
+
+<li>
+
+<a href="#FRQ-0006" title="Historial de préstamo">
+
+                                [FRQ-0006] 
+
+Historial de préstamo</a>
+
+</li>
+
+<li>
+
+<a href="#FRQ-0007" title="Bloqueos y deudas">
+
+                                [FRQ-0007] 
+
+Bloqueos y deudas</a>
+
+</li>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Descripción</th>
+
+<td align="left" valign="top">
+
+    El sistema deberá 
+
+<em>
+
+Tener una interfaz sencilla y que sea fácil de usar en cualquier dispositvo</em>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Importancia</th>
+
+<td align="left" valign="top" colspan="1">quedaría bien</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Urgencia</th>
+
+<td align="left" valign="top" colspan="1">puede esperar</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Estado</th>
+
+<td align="left" valign="top" colspan="1">en construcción</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Estabilidad</th>
+
+<td align="left" valign="top" colspan="1">
+
+<font color="red"><b>PD</b></font>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Comentarios</th>
+
+<td align="left" valign="top" colspan="1">
+
+Ninguno</td>
+
+</tr>
+
+</table>
+
+<p />
+
+<a name="NFR-0003" />
+
+<table border="1" width="100%">
+
+<tr bgcolor="#c8e0e0">
+
+<th align="left" valign="top">NFR-0003</th>
+
+<th align="left" valign="top" width="100%">
+
+Disponibilidad</th>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Versión</th>
+
+<td align="left" valign="top">1.0 
+
+			( 11/07/2025 )
+
+        </td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Autores</th>
+
+<td align="left" valign="top" colspan="1">
+
+<font color="red"><b>?</b></font>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Fuentes</th>
+
+<td align="left" valign="top" colspan="1">
+
+<ul>
+
+<li>
+
+<a href="#STK-0002">
+
+Administrador</a>
+
+<br />
+
+</li>
+
+<li>
+
+<a href="#STK-0003">
+
+Sistema</a>
+
+<br />
+
+</li>
+
+</ul>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Dependencias</th>
+
+<td align="left" valign="top" colspan="1">
+
+<li>
+
+<a href="#FRQ-0008" title="Reporte de uso">
+
+                                [FRQ-0008] 
+
+Reporte de uso</a>
+
+</li>
+
+<li>
+
+<a href="#FRQ-0005" title="Recordatorio de vencimiento">
+
+                                [FRQ-0005] 
+
+Recordatorio de vencimiento</a>
+
+</li>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Descripción</th>
+
+<td align="left" valign="top">
+
+    El sistema deberá 
+
+<em>
+
+Garantizar una disponibilidad total durante el horario de atención de la biblioteca, para asegurar que se puedan enviar recordatorios automáticos a los usuarios y que los administradores puedan consultar reportes de uso sin interrupciones.</em>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Importancia</th>
+
+<td align="left" valign="top" colspan="1">vital</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Urgencia</th>
+
+<td align="left" valign="top" colspan="1">inmediatamente</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Estado</th>
+
+<td align="left" valign="top" colspan="1">pendiente de validación</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Estabilidad</th>
+
+<td align="left" valign="top" colspan="1">
+
+<font color="red"><b>PD</b></font>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Comentarios</th>
+
+<td align="left" valign="top" colspan="1">
+
+Ninguno</td>
+
+</tr>
+
+</table>
+
+<p />
+
+<a name="SEC-0016" />
+
+<h1 align="left">A 
+
+Fuentes del requerimiento</h1><a name="STK-0001" />
+
+<table border="1" width="100%">
+
+<tr bgcolor="#c8e0e0">
+
+<th align="left" valign="top">Participante</th>
+
+<th align="left" valign="top" width="100%">
+
+Usuario</th>
+
+</tr>
+
+<tr><th align="left" valign="top">Organización</th>
+
+<td align="left" valign="top">Freelance</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Rol</th>
+
+<td align="left" valign="top" colspan="1">Usuario</td>
+
+</tr>
+
+<tr><th align="left" valign="top" nowrap="1">Es desarrollador</th>
+
+<td align="left" valign="top">No</td>
+
+</tr>
+
+<tr><th align="left" valign="top">Es cliente</th>
+
+<td align="left" valign="top">No</td>
+
+</tr>
+
+<tr><th align="left" valign="top">Es usuario</th>
+
+<td align="left" valign="top">Sí</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Comentarios</th>
+
+<td align="left" valign="top" colspan="1">
+
+Ninguno</td>
+
+</tr>
+
+</table>
+
+<p />
+
+<a name="STK-0002" />
+
+<table border="1" width="100%">
+
+<tr bgcolor="#c8e0e0">
+
+<th align="left" valign="top">Participante</th>
+
+<th align="left" valign="top" width="100%">
+
+Administrador</th>
+
+</tr>
+
+<tr><th align="left" valign="top">Organización</th>
+
+<td align="left" valign="top">
+
+<a href="#ORG-0001">
+
+Biblioteca</a>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Rol</th>
+
+<td align="left" valign="top" colspan="1">Administrador de la biblioteca</td>
+
+</tr>
+
+<tr><th align="left" valign="top" nowrap="1">Es desarrollador</th>
+
+<td align="left" valign="top">No</td>
+
+</tr>
+
+<tr><th align="left" valign="top">Es cliente</th>
+
+<td align="left" valign="top">Sí</td>
+
+</tr>
+
+<tr><th align="left" valign="top">Es usuario</th>
+
+<td align="left" valign="top">No</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Comentarios</th>
+
+<td align="left" valign="top" colspan="1">
+
+Ninguno</td>
+
+</tr>
+
+</table>
+
+<p />
+
+<a name="STK-0003" />
+
+<table border="1" width="100%">
+
+<tr bgcolor="#c8e0e0">
+
+<th align="left" valign="top">Participante</th>
+
+<th align="left" valign="top" width="100%">
+
+Sistema</th>
+
+</tr>
+
+<tr><th align="left" valign="top">Organización</th>
+
+<td align="left" valign="top">
+
+<a href="#ORG-0001">
+
+Biblioteca</a>
+
+</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Rol</th>
+
+<td align="left" valign="top" colspan="1">Sistema</td>
+
+</tr>
+
+<tr><th align="left" valign="top" nowrap="1">Es desarrollador</th>
+
+<td align="left" valign="top">No</td>
+
+</tr>
+
+<tr><th align="left" valign="top">Es cliente</th>
+
+<td align="left" valign="top">No</td>
+
+</tr>
+
+<tr><th align="left" valign="top">Es usuario</th>
+
+<td align="left" valign="top">No</td>
+
+</tr>
+
+<tr>
+
+<th align="left" valign="top">Comentarios</th>
+
+<td align="left" valign="top" colspan="1">
+
+Ninguno</td>
+
+</tr>
+
+</table>
+
+<p />
+
+</body>
+
+</html>
+
